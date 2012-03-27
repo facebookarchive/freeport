@@ -1,9 +1,9 @@
 package freeport
 
 import (
-	"testing"
 	"net"
 	"strconv"
+	"testing"
 )
 
 func TestGetFreePort(t *testing.T) {
@@ -23,8 +23,8 @@ func TestGetFreePortIsClosed(t *testing.T) {
 		t.Fatalf("Got err from GetFreePort: %s", err)
 	}
 
-	listener, err := net.Listen("tcp", "127.0.0.1:" + strconv.Itoa(port))
-  if err != nil {
+	listener, err := net.Listen("tcp", "127.0.0.1:"+strconv.Itoa(port))
+	if err != nil {
 		t.Fatalf("Got err from net.Listen: %s", err)
 	}
 	listener.Close()
