@@ -6,10 +6,10 @@ import (
 	"testing"
 )
 
-func TestGetFreePort(t *testing.T) {
-	port, err := GetFreePort()
+func TestGet(t *testing.T) {
+	port, err := Get()
 	if err != nil {
-		t.Fatalf("Got err from GetFreePort: %s", err)
+		t.Fatalf("Got err from Get: %s", err)
 	}
 
 	if port == 0 {
@@ -17,10 +17,10 @@ func TestGetFreePort(t *testing.T) {
 	}
 }
 
-func TestGetFreePortIsClosed(t *testing.T) {
-	port, err := GetFreePort()
+func TestGetIsClosed(t *testing.T) {
+	port, err := Get()
 	if err != nil {
-		t.Fatalf("Got err from GetFreePort: %s", err)
+		t.Fatalf("Got err from Get: %s", err)
 	}
 
 	listener, err := net.Listen("tcp", "127.0.0.1:"+strconv.Itoa(port))
