@@ -1,4 +1,4 @@
-freeport
+freeport [![Build Status](https://secure.travis-ci.org/nshah/go.freeport.png)](http://travis-ci.org/nshah/go.freeport)
 ========
 
 Find a free port. Documentation:
