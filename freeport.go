@@ -1,5 +1,4 @@
-// This library utilizes the feature of most OSs where a request to
-// bind to port 0 will trigger the kernel to provide a free port.
+// Package freeport provides an API to find a free port to bind to.
 package freeport
 
 import (
